@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="/" class="nav-title">📝 To-Do App</a>
+            <div class="nav-links">
+                <a href="/"><span aria-label="Home" role="img">🏠</span> Home</a>
+                <a href="/all"><span aria-label="All Tasks" role="img">📑</span> All</a>
+                <a href="/pending"><span aria-label="Pending Tasks" role="img">⏳</span> Pending</a>
+                <a href="/done"><span aria-label="Done Tasks" role="img">✅</span> Done</a>
+                <a href="/about"><span aria-label="About" role="img">ℹ️</span> About</a>
+            </div>
+        </nav>
+        {% block body %}
+        {% endblock body %}
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

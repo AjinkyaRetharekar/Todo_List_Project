@@ -1,0 +1,304 @@
+.navbar {
+  background-color: #ffffff;
+  padding: 12px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Form Styling */
+form .form-group {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.table td > div {
+  display: flex;
+  /* align-items: center; Removed vertical alignment */
+}
+
+.completed td {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.no-records {
+  margin-top: 20px;
+  font-style: italic;
+  color: #777;
+}
+
+/* Action Buttons */
+.action-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn.done {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-btn.done:hover {
+  background-color: #1e7e34;
+}
+
+.action-btn.pending {
+  background-color: #007bff;
+  color: white;
+}
+
+.action-btn.pending:hover {
+  background-color: #0056b3;
+}
+
+.action-btn.update {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.action-btn.update:hover {
+  background-color: #d39e00;
+}
+
+.action-btn.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-btn.delete:hover {
+  background-color: #c82333;
+}
+
+/* Modal Overlay */
+#modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+/* Modal Common Styling */
+#updateModal,
+#deleteModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 1000;
+  padding: 20px;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#updateModal.show,
+#deleteModal.show {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#updateModal h2,
+#deleteModal h2 {
+  margin-top: 0;
+}
+
+/* Modal Buttons */
+#updateModal button,
+#deleteModal button {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+#updateModal button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  margin-right: 10px;
+}
+
+#updateModal button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+#deleteModal button {
+  margin-right: 10px;
+}
+
+#confirmDeleteBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+#deleteModal button:last-child {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* About Page Styles */
+.about-page {
+  padding: 30px;
+}
+
+.about-page .intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-page .intro h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.about-page .intro .tagline {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.about-page h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.about-page .app-features ul,
+.about-page .tech-stack ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-page .app-features li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.about-page .app-features li i {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+.about-page .tech-stack li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.about-page .tech-stack strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.about-page .contact-info p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.about-page .contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.about-page .contact-info a:hover {
+  text-decoration: underline;
+} 
+
