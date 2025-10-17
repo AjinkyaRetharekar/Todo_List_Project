@@ -1,4 +1,4 @@
-# Python cache
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.pyc
 
@@ -12,5 +12,3 @@ env1/
 
 # VS Code settings
 .vscode/
-
-
